@@ -1,0 +1,18 @@
+<?php
+/*
+ * 
+ * This Code uses diferent Categories and publish in the HomePage. 
+ * 
+ * By Rafael Delgado.
+ */
+?>
+<?php 
+	/* Generate the Array */
+	$input = array("10000337", "10000344", "10000345", "10000346", "10000347", "10000348");
+	/* Generate the Random Number*/
+	$rand_keys = array_rand($input, 1);
+	/* Get the Array Value */
+	$randValues = $input[$rand_keys];
+	/* Render the Category Collection in the Website */
+	echo $this->getLayout()->createBlock('catalog/product_list')->setTemplate('catalog/product/home_list.phtml')->setCategoryId($randValues)->toHtml();
+?>
